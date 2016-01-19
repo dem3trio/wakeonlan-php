@@ -1,0 +1,15 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+<div class="ping-check" id="ping-check-{{ object.id }}" data-ip-ping="{{ admin.generateObjectUrl('ping', object) }}" {% if object.pingIp is not empty %}data-ip-can-ping="true"{% else %}data-ip-can-ping="false"{% endif %}>
+        {% spaceless %}
+            {% if object.pingIp is not empty %}
+                <span class="label label-success ip-success">{%- trans from 'SonataAdminBundle' %}label_type_yes{% endtrans -%}</span>
+                <span class="label label-danger ip-fail">{%- trans from 'SonataAdminBundle' %}label_type_no{% endtrans -%}</span>
+            {% else %}
+
+                <span class="label label-default">{%- trans from 'SonataAdminBundle' %}no_ip{% endtrans -%}</span>
+            {% endif %}
+        {% endspaceless %}
+    </div>
+{% endblock %}

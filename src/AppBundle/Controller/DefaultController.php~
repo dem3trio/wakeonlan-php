@@ -1,0 +1,23 @@
+<?php
+
+namespace AppBundle\Controller;
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class DefaultController extends Controller
+{
+    /**
+     * @Route("/", name="homepage")
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $promotion = $em->getRepository('AppBundle:Promotion')->findOneBy(array('active' => 1));
+
+        return $this->render(':default:index.html.twig', array(
+                'promotion' => $promotion,
+        ));
+    }
+}

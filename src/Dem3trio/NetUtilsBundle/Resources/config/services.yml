@@ -1,0 +1,3 @@
+services:
+  dem3trio_net_utils.service.net_utils:
+    class: Dem3trio\NetUtilsBundle\Service\NetUtils

@@ -1,0 +1,10 @@
+Computer List: Listado de ordenadores
+field.name: Nombre
+field.mac: MAC
+field.ping_ip: IP para Ping
+field.is_awake: Está despierto
+field.port: Puerto
+field.broadcast_ip: IP Broadcast
+field.ping_port: Puerto para ping
+action_wake_up: Despertar
+menu.computers: Ordenadores

@@ -1,0 +1,6 @@
+# app/config/config.yml
+
+sonata_admin:
+  title: WakeOnLan PHP
+
+

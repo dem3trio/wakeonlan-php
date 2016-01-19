@@ -1,0 +1,6 @@
+{% extends 'SonataAdminBundle:CRUD:list.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/js/net_functions.js') }}"></script>
+{% endblock %}

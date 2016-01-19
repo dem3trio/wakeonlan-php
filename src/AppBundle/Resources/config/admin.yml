@@ -1,0 +1,13 @@
+services:
+
+  wakeonlan.admin.computers:
+        class: AppBundle\Admin\ComputerAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "menu.computers", label: "menu.computers" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Computer
+            - AppBundle:Computer
+        calls:
+            - [ setTemplate, [list, AppBundle:ComputerAdmin:list.html.twig]]
+
